@@ -1,0 +1,111 @@
+// first from 1 to 5 
+
+- writing php 
+ 
+ <?php
+ //  write you php code here 
+ ?> // best practise to delete the ending bcz this cause problem in feuture called buffer over flow .
+
+- comments 
+  comment part from your code 
+  comment to discribe what you are doing  but complex singth only 
+  /**/ malti line comment 
+  // single line comment 
+  
+########################################################
+
+Data types 
+
+ - bool        => boolean
+ - int         => integer 
+ - float       => floating point number if you print it 
+ - string      => 
+ - array       => 
+ - other types => 
+ - gettype()   // this will git type of the variable 
+/* */
+ 
+  php has automatic type convertion 
+  5+"5" // 10 
+  5+"5 mm" // 10 => but it will give you warnning 
+
+/* type casting */
+
+  تحويل المتغيرات من نوع الى اخر 
+- "integer" or "int"
+- "boolean" or "bool"
+- "float" or "double" or "real"
+- "string" 
+- "object"
+- "null"
+-----------
+searching about set type 
+==========================================
+Examples 
+==========================================
+
+-----------------
+converting data to int
+-----------------
+echo 5 + (int) 15.5  // 20  => int 
+echo (int) (10.5 + 10.5) // 21  => int
+ 
+-----------------
+converting data to boolean
+-----------------
+var_dump((bool)"")         // false 
+var_dump((bool)"1")        // ture 
+var_dump((bool) "0")       // false
+var_dump((bool)[])         // false
+var_dump((bool) 0)         // false
+var_dump((bool) false)     // false
+var_dump((bool)array(1))   // ture
+var_dump((bool) 10.5)      // true
+
+----------------- 
+string and scapping 
+-----------------
+echo " hello 'php' ";             // no scaping 
+echo ' hello \'php\'';            // this is scaping 
+
+- echo nl2br ("i love back end 
+              i love php 
+              i love databases ") // this will convert new line to <br>
+
+scapping without adding br
+
+- Heredoc <<<"here"     here;     // scape and process means if there is a variable will process and pring it 
+- Nowdoc  <<<'now'      now;      // this will scape the all 
+
+-----------------
+woring will array 
+-----------------
+- array with key 
+- array withput keys
+- array with one key 
+- array value override 
+-----------------
+print_r() ; // built in function that print the array in human readable 
+
+print_r([
+    "key" => "value",
+    "key" => "value",
+    "mohamed"
+]);
+// the element that you dont give it an index mohamed will take index 0 
+
+########################################################
+
+Variables : 
+
+- Naming rules + Info
+  [1] Start with $
+  [2] Start with [a-z] [A-Z] or Underscore
+  [3] U can use number inside the name 
+  [4] No special charchter is allowed
+  [5] Case Single and Double Quotes
+
+  search : 
+    - loosly type language 
+
+    
