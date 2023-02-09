@@ -105,7 +105,29 @@ Variables :
   [4] No special charchter is allowed
   [5] Case Single and Double Quotes
 
+-----------------
   search : 
     - loosly type language 
+-----------------  
+
+-----------------
+variable variable : varible value used to make it as variable name .
+-----------------
+
+$myName = "mohamed";
+$$myName = "ahmed";
+
+echo $myName ;  // mohamed
+echo &&myName ; // ahmed 
+echo "my name is &{$myName}" bcz there is more than $ sign you should add {}      // ahmed
+
+
+----------------- 
+assign variable by referance  
+-----------------
+
+
+
+########################################################
 
     

@@ -1,0 +1,8 @@
+- Search : referances Are not pointers .
+ first you need to understand the memory then you can understand the pointer .
+
+  the memory depening into two things the address and the value 
+     address : is the actual location that your data is stored 
+     value   : it is your actual data . 
+  
+    address is like that 0x1000 
