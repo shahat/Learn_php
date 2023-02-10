@@ -123,11 +123,188 @@ echo "my name is &{$myName}" bcz there is more than $ sign you should add {}    
 
 
 ----------------- 
-assign variable by referance  
+- assign variable by referance  
+-----------------
+  by default, variables are always assigned by value 
+  assigned by referance make variable alias or point to another 
+
+  $a = "mohamed";
+  $a = &$m;        // this mean the value that in the $a location that is mohamed 
+  $m = "ahmed";    
+
+  // $a and $m is = to ahmed 
+  because they are referanced to the same value in the memory .
+
+-----------------
+  search : referance are not pointer ?
+  // you can find the result in differant file 
+-----------------    
+
+-----------------
+- Pre-Defined Variables .
+   Search about them : - PHP pre defined variables . 
 -----------------
 
+   print_r($_SERVER)          // this will print your server connections 
+   echo $_Post["userName"]    // there are many you  can find them by search 
 
+-----------------
+- constants 
+  values cannot change during the execution 
+  constants always uppercase 
+----------------- 
+ 
+  define("DB_NAME", "medo",false); // false mean case sensitive  its false by default you can delete it .
+  echo DB_NAME;
+  
+
+-----------------
+Pre-Define constant [case-sesitive] ?
+
+  PHP_VERSION
+  PHP_OS_FAMILY
+  PHP_INT_MAX
+  DEFAULT_INCLUDE_PATH
+     
+  Magic constants [ case insensitive ]
+
+  - __LINE__
+  - __FILE__
+  - __DIR__
+
+  Reserved Keywords 
+    - break
+    - clone 
+
+
+-----------------
+search 
+  - PHP predefined constants 
+  - compile time vs runtime
+  - list of reservied words 
+-----------------
 
 ########################################################
 
-    
+operators 
+
++
+-
+*
+/ 
+**
+%
+- converting string to to number and add - 
++  converting string to to number and add + 
++=
+-=
+*=
+/=
+**=
+%=
+
+-----------------
+comparision operator 
+
+==    // comparision in value 
+===   // strick comparision [type & value]  
+!=    // not equal 
+<>    // not equal same result as upper 
+!==   // not equal strick [type & value]
+>     // larger than
+<     // lower than
+>=    // larger or equal
+<=    // lower or equal 
+<=>   // [less than >> -1 , eqaul>> 0  , or greater >> 1 ]
+
+-----------------
+increment & decrement   operators
+  ++ 
+  --
+  ++number pre increment 
+  number++ past increment 
+
+-----------------
+ logical operators operators
+
+
+ and => two are true 
+ &&  => two are true ["&&" Has a greater precedence than "and" ] 
+ or  => one or both are true 
+ ||  => one or both are true ["||" Has a greater precedence than "or" ] 
+ xor => one is true but not both 
+ !   => not true 
+
+-----------------
+string operator  => lec_26_elzero 
+
+   concatenating string 
+
+ using dot [.]
+
+ $a = "mohamed";
+ $b = "ahmed";
+ $c = "mahmoud";
+
+ echo $a . $b . $c ; // mohamedahmedmahmoud // without spacing 
+ echo $a." ". $b ." ". $c; // mohamed ahmed mahmoud
+ echo " {$a} {$b} {$c}" //  // mohamed ahmed mahmoud
+
+ex : 
+echo  $a = "mohamed"; // mohamed 
+echo  $a .= " ahmed"; // mohamed ahmed 
+echo  $a .= " mahmoud"; // mohamed ahmed mahmoud 
+//      
+
+-----------------
+array operator  => lec_27_elzero 
+  
+  Deal with array 
+
+  => +   union 
+  => ==  equal ==> same key and the value 
+  => !=  not equal 
+  => <>  not equal  ---- Q : what is the differance between these and the upper one  
+  => === Identical => same key and value, same order same type 
+  => !== not equal 
+=================
+examples: 
+
+
+-----------------
+error operator 
+  
+  error control operator : this can control the error 
+     - this control the error . 
+     @ 
+      - variables 
+      - files
+      - Include 
+
+-varible
+ex: 
+ $a = @$b die("variable not found ") 
+ // this help me to print thes massage not the error message 
+ // this also stop the script that become after it 
+ex : 
+ $a = @$b or  die("variable not found ") 
+ // bcz $b is not found so the die() part will work .
+ // this also stop the script that become after it 
+
+- file 
+ $f = @file("mohamed.txt") or die("file is not found");
+ // if file is not fond it will print the die function 
+ // if the file is there it will insert it ito the f variable 
+
+- include
+( @inculde("mohamed.php")) or die("file you want to include not found");
+ 
+ -----------------
+
+ operator precedence 
+  
+  "||" has a greater precedence that " or "
+  "&&" has a greater precedence that " and "
+
+
+   
